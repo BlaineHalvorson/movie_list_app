@@ -24,20 +24,136 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
               child: Column(
                 children: [
-                  Text("Genre"),
+                  const Text(
+                    "Genre",
+                  ),
                   ListView(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
                     children: [
-                      Row(
-                        children: [
-                          Image.asset('assets/placeholder-image.png')
-                        ],
+                      Card(
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  'assets/placeholder-image.png',
+                                  height: 150,
+                                  width: 150,
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Text("Movie Title Here"),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Text("Minor information about the movie here."),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Card(
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  'assets/placeholder-image.png',
+                                  height: 150,
+                                  width: 150,
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Text("Movie Title Here"),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Text("Minor information about the movie here."),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Card(
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  'assets/placeholder-image.png',
+                                  height: 150,
+                                  width: 150,
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Text("Movie Title Here"),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Text("Minor information about the movie here."),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Card(
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  'assets/placeholder-image.png',
+                                  height: 150,
+                                  width: 150,
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Text("Movie Title Here"),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Text("Minor information about the movie here."),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -46,11 +162,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
